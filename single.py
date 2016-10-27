@@ -24,23 +24,24 @@ def getNums(N):
 #         print type(row["teaname"]), row["code"], row["pass"]
 #         print r.content
 #     print str(threading.current_thread()) + ": " + str(num) + " → " + str(num_add)
-def processNum():
+def processNum(num):
     tables = util.excel_table_byindex()
     for index in range(len(tables)):
         num_add = index + 1
         sleep(1)
         print "aaaaaaaaaaaaaaaaaaaaaaaaaa"
         tables = util.excel_table_byindex()
-        # tables[index]
-        r = login_func("172.31.3.73:6020", str(tables[index]["teaname"]), str(tables[index]["code"]), str(tables[index]["pass"]))
+    # tables[index]
+        r = login_func("172.31.3.73:6020", str(tables[index]["teaname"]), str(tables[index]["code"]),
+                   str(tables[index]["pass"]))
         print type(tables[index]["teaname"]), tables[index]["code"], tables[index]["pass"]
         print r.content
-    print str(threading.current_thread()) + ": " + str(index) + " → " + str(num_add)
+        print str(threading.current_thread()) + ": " + str(index) + " → " + str(num_add)
 
 
 if __name__ == "__main__":
     t1 = time()
     for i in getNums(1):
-        processNum()
+        processNum(1)
 
     print "cost time is: {:.2f}s".format(time() - t1)

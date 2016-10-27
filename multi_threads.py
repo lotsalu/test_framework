@@ -13,7 +13,7 @@ sys.setdefaultencoding('utf-8')
 
 def main():
     ts = time()
-    nums = getNums(1000)
+    nums = getNums(100)
     p = Pool(100)
     p.map(processNum, nums)
     print("cost time is: {:.2f}s".format(time() - ts))
