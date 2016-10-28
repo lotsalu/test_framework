@@ -35,7 +35,7 @@ def processNum(num):
         r = login_func("172.31.3.73:6020", str(tables[index]["teaname"]), str(tables[index]["code"]),
                    str(tables[index]["pass"]))
         print type(tables[index]["teaname"]), tables[index]["code"], tables[index]["pass"]
-        print r.content
+        # print r.content
         print str(threading.current_thread()) + ": " + str(index) + " → " + str(num_add)
 
 
