@@ -15,7 +15,7 @@ sys.setdefaultencoding('utf-8')
 def main():
     tables = util.excel_table_byindex()
     ts = time()
-    nums = getNums(30)
+    nums = getNums(1)
     p = Pool(len(tables))
     p.map(processNum, nums)
     print("cost time is: {:.2f}s".format(time() - ts))
